@@ -1,0 +1,28 @@
+﻿<Window x:Class="Students.EditingStudentDataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Students"
+        mc:Ignorable="d"
+        Title="Редактирование" 
+        Height="175" Width="300"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        Icon="Resources/edit.png">
+    <Grid>
+        <Label x:Name="firstNameLabel" Content="Имя*:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="lastNameLabel" Content="Фамилия*:" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="ageLabel" Content="Возраст:" HorizontalAlignment="Left" Margin="0,47,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="genderLabel" Content="Пол*:" HorizontalAlignment="Left" Margin="1,71,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="informationLabel" Content="* - эти поля обязательны для заполнения" HorizontalAlignment="Left" Margin="0,95,0,0" VerticalAlignment="Top"/>
+
+        <Button x:Name="okButton" Content="ОК" HorizontalAlignment="Left" Margin="3,119,0,0" VerticalAlignment="Top" Width="75" Click="okButton_Click"/>
+        <Button x:Name="cancelButton" Content="Отмена" HorizontalAlignment="Left" Margin="207,119,0,0" VerticalAlignment="Top" Width="75" Click="cancelButton_Click"/>
+
+        <TextBox x:Name="firstNameTextBox" Height="16" Margin="62,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" HorizontalAlignment="Left" ToolTip="Имя (обязательно для заполнения)" KeyDown="firstNameTextBox_KeyDown"/>
+        <TextBox x:Name="lastNameTextBox" Height="16" Margin="62,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" HorizontalAlignment="Left" ToolTip="Фамилия (обязательно для заполнения)" KeyDown="lastNameTextBox_KeyDown"/>
+        <TextBox x:Name="ageTextBox" Height="16" Margin="62,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" HorizontalAlignment="Left" ToolTip="Возраст (от 16 лет)" KeyDown="ageTextBox_KeyDown"/>
+        <TextBox x:Name="genderTextBox" Height="16" Margin="62,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" HorizontalAlignment="Left" ToolTip="Пол (обязательно для заполнения)" KeyDown="genderTextBox_KeyDown"/>
+    </Grid>
+</Window>
